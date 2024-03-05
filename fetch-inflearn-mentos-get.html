@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mentors Get</title>
+</head>
+<body>
+<script>
+  const apiUrl = "https://www.inflearn.com/api/mentors?page=1";
+
+  function fetchData() {
+    fetch(apiUrl)
+            .then(res => {
+              return res.json();
+            })
+            .then(data => {
+              console.log("응답 데이터: ", data);
+            })
+            .catch(err => {
+              console.error("err: ", err);
+            });
+  }
+
+  fetchData();
+</script>
+</body>
+</html>
